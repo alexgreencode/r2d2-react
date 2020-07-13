@@ -1,0 +1,75 @@
+$dimension: 5;
+
+.RobotPage {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  width: 1024px;
+
+  &__inputs-box {
+    > .field.has-addons {
+      > .control {
+        > input {
+          width: 60px;
+        }
+        > select {
+          width: 80px;
+        }
+      }
+    }
+
+    > div.buttons {
+      justify-content: space-between;
+    }
+
+    > button.button {
+      width: 100%;
+    }
+  }
+
+  &__report {
+    margin-top: 24px;
+    padding: 1.5rem;
+    border-color: chocolate;
+    border-style: double;
+    font-size: 18px;
+  }
+
+  &__table {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+
+    > div {
+      width: calc(100%/#{$dimension});
+      height: calc(100%/#{$dimension});
+      border-color: chocolate;
+      border-style: double;
+    }
+  }
+}
+
+.robot {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  padding: 6px;
+}
+
+.robot_North {
+  background-image: url("./images/robot_north.svg");
+}
+
+.robot_West {
+  background-image: url("./images/robot_west.svg");
+}
+
+.robot_South {
+  background-image: url("./images/robot_south.svg");
+}
+
+.robot_East {
+  background-image: url("./images/robot_east.svg");
+}
